@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Country Task</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+    <div style="text-align: center;" >
+        <p style="color: cadetblue;"><strong>Guess The Capital</strong></p>
+        <form method="post">
+            {% csrf_token %}
+            <label>Country:</label>
+            <input type="text" value="{{country_name}}" name="country"/><br>
+            <br>
+            <label for="idcountry">Enter The Capital Name:</label>
+            <input type="text" name="capital" id="idcountry" required><br>
+            <br>
+            <button type="submit">Submit Answer</button>
+        </form>
+        {% if answer %}
+            <h3 style="color: green;">Correct Answer is {{answer}}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
