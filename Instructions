@@ -1,2 +1,5 @@
 Download the zip file and extract it in a folder 
 open the folder in the vs code 
+open the terminal in vs code 
+change directory to 'country_capital'
+run the command --> 'python manage.py runserver'
